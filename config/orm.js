@@ -23,7 +23,7 @@ function translateSql(obj) {
 }
 var orm = {
     selectAll: function(table, cb) {
-        var dbQuery = "SELECT * FROM" + table + ";";
+        var dbQuery = "SELECT * FROM " + table + ";";
         connection.query(dbQuery, function(err, res) {
             if (err) {
                 throw err;
@@ -64,3 +64,4 @@ var orm = {
         });
     }
 };
+module.exports = orm;
